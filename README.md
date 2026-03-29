@@ -22,13 +22,6 @@ Small and very fast portable launcher and updater for Chromium.
 - An SSE2-capable CPU
 - KB3063858 update for Windows 7 was required [[x64](https://www.microsoft.com/en-us/download/details.aspx?id=47442) / [x32](https://www.microsoft.com/en-us/download/details.aspx?id=47409)]
 
-### GPG Signature:
-Binaries have GPG signature `chrlauncher.exe.sig` in application folder.
-
-- Public key: [pubkey.asc](https://raw.githubusercontent.com/henrypp/builder/master/pubkey.asc) ([pgpkeys.eu](https://pgpkeys.eu/pks/lookup?op=index&fingerprint=on&search=0x5635B5FD))
-- Key ID: 0x5635B5FD
-- Fingerprint: D985 2361 1524 AB29 BE73 30AC 2881 20A7 5635 B5FD
-
 ### Default browser:
 chrlauncher has feature to use portable Chromium as default browser and it will be open links from another programs through chrlauncher.
 - start "SetDefaultBrowser.bat" (as admin).
