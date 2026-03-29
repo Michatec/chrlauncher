@@ -128,7 +128,4 @@ ChromiumRunAtEnd=true
 # Set proxy configuration (string):
 #Proxy=127.0.0.1:80
 
-Website: https://github.com/henrypp
-Support: sforce5@mail.ru
-
 (c) 2015-2026 Henry++
