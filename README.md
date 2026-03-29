@@ -158,4 +158,6 @@ ChromiumRunAtEnd=true
 #Proxy=127.0.0.1:80
 ~~~
 (c) 2015-2026 Michatec
+
+
 This is a fork of the original [Repo](https://github.com/henrypp/chrlauncher).
