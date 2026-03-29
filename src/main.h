@@ -13,10 +13,9 @@ DEFINE_GUID (GUID_TrayIcon, 0xEAD41630, 0x90BB, 0x4836, 0x82, 0x41, 0xAE, 0xAE, 
 // config
 #define LANG_MENU 3
 
-#define FOOTER_STRING L"<a href=\"https://github.com/henrypp\">github.com/henrypp</a>\r\n" \
-	L"<a href=\"https://chromium.woolyss.com\">chromium.woolyss.com</a>"
+#define FOOTER_STRING L"<a href=\"https://github.com/michatec\">github.com/michatec</a>\r\n"
 
-#define CHROMIUM_UPDATE_URL L"https://chromium.woolyss.com/api/v3/?os=windows&bit=%d&type=%s&out=string"
+#define CHROMIUM_UPDATE_URL L"https://github.com/michatec"
 
 #define CHROMIUM_TYPE L"dev-official"
 #define CHROMIUM_COMMAND_LINE L"--flag-switches-begin --user-data-dir=..\\profile --no-default-browser-check --disable-logging --no-report-upload --flag-switches-end"
