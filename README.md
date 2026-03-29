@@ -1,11 +1,11 @@
 <h1 align="center">chrlauncher</h1>
 
 <p align="center">
-	<a href="https://github.com/henrypp/chrlauncher/releases"><img src="https://img.shields.io/github/v/release/henrypp/chrlauncher?style=flat-square&include_prereleases&label=version" /></a>
-	<a href="https://github.com/henrypp/chrlauncher/releases"><img src="https://img.shields.io/github/downloads/henrypp/chrlauncher/total.svg?style=flat-square" /></a>
-	<a href="https://github.com/henrypp/chrlauncher/issues"><img src="https://img.shields.io/github/issues-raw/henrypp/chrlauncher.svg?style=flat-square&label=issues" /></a>
-	<a href="https://github.com/henrypp/chrlauncher/graphs/contributors"><img src="https://img.shields.io/github/contributors/henrypp/chrlauncher?style=flat-square" /></a>
-	<a href="https://github.com/henrypp/chrlauncher/blob/master/LICENSE"><img src="https://img.shields.io/github/license/henrypp/chrlauncher?style=flat-square" /></a>
+	<a href="https://github.com/michatec/chrlauncher/releases"><img src="https://img.shields.io/github/v/release/michatec/chrlauncher?style=flat-square&include_prereleases&label=version" /></a>
+	<a href="https://github.com/michatec/chrlauncher/releases"><img src="https://img.shields.io/github/downloads/michatec/chrlauncher/total.svg?style=flat-square" /></a>
+	<a href="https://github.com/michatec/chrlauncher/issues"><img src="https://img.shields.io/github/issues-raw/michatec/chrlauncher.svg?style=flat-square&label=issues" /></a>
+	<a href="https://github.com/michatec/chrlauncher/graphs/contributors"><img src="https://img.shields.io/github/contributors/michatec/chrlauncher?style=flat-square" /></a>
+	<a href="https://github.com/michatec/chrlauncher/blob/master/LICENSE"><img src="https://img.shields.io/github/license/michatec/chrlauncher?style=flat-square" /></a>
 </p>
 
 -------
@@ -20,13 +20,7 @@ Small and very fast portable launcher and updater for Chromium.
 ### System requirements:
 - Windows 7, 8, 8.1, 10, 11 32-bit/64-bit
 - An SSE2-capable CPU
-- <s>KB2533623</s> KB3063858 update for Windows 7 was required [[x64](https://www.microsoft.com/en-us/download/details.aspx?id=47442) / [x32](https://www.microsoft.com/en-us/download/details.aspx?id=47409)]
-
-### Donate:
-- [Bitcoin](https://www.blockchain.com/btc/address/1LrRTXPsvHcQWCNZotA9RcwjsGcRghG96c) (BTC)
-- [Ethereum](https://www.blockchain.com/explorer/addresses/eth/0xe2C84A62eb2a4EF154b19bec0c1c106734B95960) (ETH)
-- [Yandex Money](https://yoomoney.ru/to/4100115776040583) (RUB)
-- [Paypal](https://paypal.me/henrypp) (USD)
+- KB3063858 update for Windows 7 was required [[x64](https://www.microsoft.com/en-us/download/details.aspx?id=47442) / [x32](https://www.microsoft.com/en-us/download/details.aspx?id=47409)]
 
 ### GPG Signature:
 Binaries have GPG signature `chrlauncher.exe.sig` in application folder.
@@ -163,18 +157,5 @@ ChromiumRunAtEnd=true
 # Set proxy configuration (string):
 #Proxy=127.0.0.1:80
 ~~~
-### FAQ:
-- [If you lost all setting and extensions when copy Chromium to another PC (answer)](https://github.com/henrypp/chrlauncher/issues/116#issuecomment-444426692)
-- [How to force check for an update every chrlauncher start?](https://github.com/henrypp/chrlauncher/issues/92#issuecomment-343274418)
-- [How to host the Chromium package zip on custom network?](https://github.com/henrypp/chrlauncher/issues/86)
-- [Can't sign-in to Chromium](https://github.com/henrypp/chrlauncher/issues/115#issuecomment-444268533)
-- [Set proxy configuration for a chrlauncher](https://github.com/henrypp/chrlauncher/issues/61#issuecomment-439295515)
-- [Pass on chrlauncher arguments into Chromium](https://github.com/henrypp/chrlauncher/issues/76#issuecomment-312444105)
-- [Disable annoying chrlauncher window popup](https://github.com/henrypp/chrlauncher/issues/96#issuecomment-439294915)
-- [Is it possible to downgrade Chromium version?](https://github.com/henrypp/chrlauncher/issues/112#issuecomment-440940865)
-- [Fix for duplicated taskbar icons creation](https://github.com/henrypp/chrlauncher/issues/49#issuecomment-289285155)
----
-- Website: [github.com/henrypp](https://github.com/henrypp)
-- Support: sforce5@mail.ru
----
-(c) 2015-2026 Henry++
+(c) 2015-2026 Michatec
+This is a fork of the original [Repo](https://github.com/henrypp/chrlauncher).
