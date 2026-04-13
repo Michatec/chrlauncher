@@ -46,12 +46,12 @@ BOOL CALLBACK activate_browser_window_callback (
 	if (!_r_wnd_isvisible (hwnd, FALSE))
 		return TRUE;
 
-	status = _r_sys_openprocess (pid, PROCESS_QUERY_LIMITED_INFORMATION, &hprocess);
+	status = _r_sys_openprocess (&hprocess, pid, PROCESS_QUERY_LIMITED_INFORMATION);
 
 	if (!NT_SUCCESS (status))
 		return TRUE;
 
-	status = _r_sys_queryprocessstring (hprocess, ProcessImageFileNameWin32, &process_path);
+	status = _r_sys_queryprocessstring (&process_path, hprocess, ProcessImageFileNameWin32);
 
 	if (NT_SUCCESS (status))
 	{
@@ -729,7 +729,7 @@ BOOLEAN _app_checkupdate (
 			{
 				_r_inet_initializedownload (&download_info, NULL, NULL, NULL);
 
-				status = _r_inet_begindownload (hsession, &url->sr, &download_info);
+				status = _r_inet_begindownload (&download_info, hsession, &url->sr);
 
 				if (status == STATUS_SUCCESS)
 				{
@@ -862,6 +862,7 @@ BOOLEAN _app_downloadupdate (
 	if (hsession)
 	{
 		status = _r_fs_createfile (
+			&hfile,
 			&pbi->cache_path->sr,
 			FILE_OVERWRITE_IF,
 			FILE_GENERIC_WRITE,
@@ -869,8 +870,7 @@ BOOLEAN _app_downloadupdate (
 			FILE_ATTRIBUTE_TEMPORARY,
 			FILE_SEQUENTIAL_ONLY,
 			FALSE,
-			NULL,
-			&hfile
+			NULL
 		);
 
 		if (!NT_SUCCESS (status))
@@ -883,7 +883,7 @@ BOOLEAN _app_downloadupdate (
 		{
 			_r_inet_initializedownload (&download_info, hfile, &_app_downloadupdate_callback, pbi);
 
-			status = _r_inet_begindownload (hsession, &pbi->download_url->sr, &download_info);
+			status = _r_inet_begindownload (&download_info, hsession, &pbi->download_url->sr);
 
 			_r_inet_destroydownload (&download_info); // required!
 
@@ -1209,7 +1209,7 @@ BOOLEAN _app_unpack_zip (
 		{
 			_r_obj_initializebyteref (&path_sr, file_stat.m_filename);
 
-			status = _r_str_multibyte2unicode (&path_sr, &path);
+			status = _r_str_multibyte2unicode (&path, &path_sr);
 
 			if (!NT_SUCCESS (status))
 				continue;
@@ -1236,7 +1236,7 @@ BOOLEAN _app_unpack_zip (
 
 		_r_obj_initializebyteref (&path_sr, file_stat.m_filename);
 
-		status = _r_str_multibyte2unicode (&path_sr, &path);
+		status = _r_str_multibyte2unicode (&path, &path_sr);
 
 		if (!NT_SUCCESS (status))
 			continue;
