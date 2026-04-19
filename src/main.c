@@ -327,7 +327,7 @@ VOID _app_init_browser_info (
 		return;
 	}
 
-	status = _r_path_getfullpath (&binary_dir->sr, &string);
+	status = _r_path_getfullpath (&string, &binary_dir->sr);
 
 	if (NT_SUCCESS (status))
 	{
@@ -386,7 +386,7 @@ VOID _app_init_browser_info (
 
 	binary_dir = _r_config_getstringexpand (L"ChromePlusDirectory", L".\\chrome_plus", NULL);
 
-	status = _r_path_getfullpath (&binary_dir->sr, &string);
+	status = _r_path_getfullpath (&string, &binary_dir->sr);
 
 	if (NT_SUCCESS (status))
 	{
@@ -1229,7 +1229,7 @@ BOOLEAN _app_unpack_zip (
 		}
 	}
 
-	for (UINT i = 0; i < total_files; i++)
+	for (ULONG i = 0; i < total_files; i++)
 	{
 		if (!mz_zip_reader_file_stat (&zip_archive, i, &file_stat))
 			continue;
